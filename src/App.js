@@ -6,12 +6,12 @@ import {
   Link
 } from "react-router-dom";
 
-
-
 import './App.css';
 import ListBlog from "./pages/admininistration/ListBlog";
 import EditBlog from "./pages/admininistration/EditBlog";
 import CreateBlog from "./pages/admininistration/CreateBlog";
+import BlogListPage from "./pages/blog/List";
+import SingleBlogPage from "./pages/blog/Single";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
                 <Link to="/">Accueil</Link>
               </li>
               <li>
-                <Link to="/">Articles</Link>
+                <Link to="/posts">Articles</Link>
               </li>
               <li>
                 <Link to="/">Connexion</Link>
@@ -38,7 +38,12 @@ function App() {
             renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path="/">
-
+            </Route>
+            <Route path="/posts">
+              <BlogListPage/>
+            </Route>
+            <Route path="/post/:id">
+              <SingleBlogPage/>
             </Route>
             <Route exact path="/admin/blog">
               <ListBlog />
