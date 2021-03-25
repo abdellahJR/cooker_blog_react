@@ -1,3 +1,4 @@
+import logo from './logo.svg';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -6,6 +7,9 @@ import {
   Link
 } from "react-router-dom";
 
+import Login from './pages/authentification/Login';
+import Register from './pages/authentification/Register';
+import ForgotPassword from './pages/authentification/ForgotPassword';
 import './App.css';
 import ListBlog from "./pages/admininistration/ListBlog";
 import EditBlog from "./pages/admininistration/EditBlog";
@@ -44,6 +48,15 @@ function App() {
             </Route>
             <Route path="/post/:id">
               <SingleBlogPage/>
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/forgotpassword">
+              <ForgotPassword />
             </Route>
             <Route exact path="/admin/blog">
               <ListBlog />
