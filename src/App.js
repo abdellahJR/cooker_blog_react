@@ -1,3 +1,4 @@
+import logo from './logo.svg';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -5,9 +6,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
-
-
+import Login from './pages/authentification/Login';
+import Register from './pages/authentification/Register';
+import ForgotPassword from './pages/authentification/ForgotPassword';
 import './App.css';
 
 function App() {
@@ -31,8 +32,14 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/">
-
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/forgotpassword">
+              <ForgotPassword />
             </Route>
           </Switch>
         </div>
