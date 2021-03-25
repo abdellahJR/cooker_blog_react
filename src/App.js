@@ -10,6 +10,9 @@ import Login from './pages/authentification/Login';
 import Register from './pages/authentification/Register';
 import ForgotPassword from './pages/authentification/ForgotPassword';
 import './App.css';
+import ListBlog from "./pages/admininistration/ListBlog";
+import EditBlog from "./pages/admininistration/EditBlog";
+import CreateBlog from "./pages/admininistration/CreateBlog";
 
 function App() {
   return (
@@ -26,12 +29,16 @@ function App() {
               <li>
                 <Link to="/">Connexion</Link>
               </li>
+              <li>
+                <Link to="/admin/blog">Administration</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
+<<<<<<< HEAD
             <Route path="/login">
               <Login />
             </Route>
@@ -40,6 +47,19 @@ function App() {
             </Route>
             <Route path="/forgotpassword">
               <ForgotPassword />
+=======
+            <Route exact path="/">
+
+>>>>>>> df5fd0ee1b01d34ca803ab90f5c1eb3d48a1b9f9
+            </Route>
+            <Route exact path="/admin/blog">
+              <ListBlog />
+            </Route>
+            <Route path="/admin/blog/:id/edit">
+              <EditBlog />
+            </Route>
+            <Route path="/admin/blog/create">
+              <CreateBlog />
             </Route>
           </Switch>
         </div>
