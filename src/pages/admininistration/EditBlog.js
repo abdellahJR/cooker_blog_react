@@ -1,14 +1,7 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-export default function CreateBlog() {
-    return (
-        <h1>Créer un article</h1>
-=======
 import React, {useState} from "react";
 import {Button, Container, TextField} from "@material-ui/core";
 
-export default function CreateBlog() {
+export default function EditBlog() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
@@ -22,7 +15,7 @@ export default function CreateBlog() {
 
     return (
         <Container maxWidth="lg">
-            <h1>Créer un article</h1>
+            <h1>Modifier l'article</h1>
             <form noValidate>
                 <TextField
                     id="outlined-basic"
@@ -46,10 +39,9 @@ export default function CreateBlog() {
                     value={content}
                 />
                 <Button variant="contained" color="primary" onClick={handleSubmit}>
-                    Créer
+                    Sauvegarder
                 </Button>
             </form>
         </Container>
->>>>>>> Stashed changes
     );
 }
