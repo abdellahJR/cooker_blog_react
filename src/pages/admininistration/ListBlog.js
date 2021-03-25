@@ -34,12 +34,13 @@ export default function ListBlog() {
     }))(TableRow);
 
     return (<>
-
             <Container maxWidth="lg">
             <h1>Administrer les articles</h1>
-            <Button variant="contained" color="primary" style={{marginBottom: '20px'}} href="/admin/blog/create">
-                Créer un article
-            </Button>
+            <Link to="/admin/blog/create">
+                <Button variant="contained" color="primary" style={{marginBottom: '20px'}}>
+                    Créer un article
+                </Button>
+            </Link>
             <TableContainer component={Paper}>
                 <Table aria-label="customized table">
                     <TableHead>
