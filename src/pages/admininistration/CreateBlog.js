@@ -14,7 +14,6 @@ export default function CreateBlog() {
     }
 
     return (
-
         <Container maxWidth="lg">
             <h1>Créer un article</h1>
             <form noValidate>
