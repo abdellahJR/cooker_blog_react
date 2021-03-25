@@ -38,7 +38,6 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-<<<<<<< HEAD
             <Route path="/login">
               <Login />
             </Route>
@@ -47,10 +46,6 @@ function App() {
             </Route>
             <Route path="/forgotpassword">
               <ForgotPassword />
-=======
-            <Route exact path="/">
-
->>>>>>> df5fd0ee1b01d34ca803ab90f5c1eb3d48a1b9f9
             </Route>
             <Route exact path="/admin/blog">
               <ListBlog />
